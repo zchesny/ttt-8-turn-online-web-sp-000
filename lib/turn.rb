@@ -8,17 +8,14 @@ end
 
 # code your #valid_move? method here
 def valid_move?(board, index)
-  # is index present in game board
-  if index.between?(0, 8) == false
+  if position_taken?(board, index)
     return false
-  end
-  # is index not already filled with a token
-  if position_taken?(board, index) == true
-    return false
-  else
+  elsif index.between(0,8) && !position_taken?(board,index)
     return true
+  else
+    return false
   end
-end
+end 
 
 def position_taken?(board, index)
   if board[index] == " " || board[index] == "" || board[index] = nil
