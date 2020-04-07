@@ -6,49 +6,36 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your #valid_move? method here
-def valid_move?(board, index)
-  # is index present in game board
-  if index.between?(0, 8) == false
-    return false
-  end
-  # is index not already filled with a token
-  if position_taken?(board, index) == true
-    return false
-  else
-    return true
-  end
+def turn(board)
+  puts "Please enter 1-9:"
+  the_string_they_put_in = gets.strip
+  their_desired_position = input_to_index(the_string_they_put_in)
+    if valid_move?(board, their_desired_position) == true
+    move(board, their_desired_position)
+    display_board(board)
+    else
+    turn(board)
+    end
 end
 
-def position_taken?(board, index)
-  if board[index] == " " || board[index] == "" || board[index] = nil
-    return false
-  else
-    return true
-  end
-end
-
-# code your input_to_index and move method here!
-def input_to_index(input)
+def input_to_index(input) # code your input_to_index and move method here!
   input.to_i - 1
 end
 
-def update_array_at_with(array, index, value)
-  array[index] = value
+def move(board, index, character="X")
+  board[index] = character
 end
 
-def move(board, index, char="X")
-  update_array_at_with(board, index, char)
+def valid_move?(board, index)
+  if index.between?(0,8) && !position_taken?(board,index)
+    return true
+  end
 end
 
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    move(board, index)
-    display(board)
+def position_taken?(board,index) # code your #position_taken? method here!
+  if board[index] == " " || board[index] =="" || board[index] == nil
+    return false
   else
-    turn(board)
+    return true
   end
 end
