@@ -43,17 +43,12 @@ end
 
 def turn()
   index = get_user_input()
-  # if the move is valid, make the move and display the board to the user
   until valid_move?(board, index) == true
-
+    index = get_user_input()
   end
-  if valid_move?(board, index) == true
-    move(board, index)
-    display(board)
-  else
-
-  end
-  # if the move is invalid, ask for a new move until a valid move is received
+  # if the move is valid, make the move and display the board to the user
+  move(board, index)
+  display(board)
 end
 
 def get_user_input()
