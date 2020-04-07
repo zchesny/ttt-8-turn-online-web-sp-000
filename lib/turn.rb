@@ -41,7 +41,7 @@ def move(board, index, char="X")
   update_array_at_with(board, index, char)
 end
 
-def turn()
+def turn(board)
   index = get_user_input()
   # If the move is invalid, ask for a new move until a valid move is received.
   until valid_move?(board, index) == true
