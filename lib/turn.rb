@@ -50,14 +50,16 @@ def get_user_input
   index = input_to_index(input)
 end
 
-
 def turn(board)
-  index = get_user_input
-  # If the move is invalid, ask for a new move until a valid move is received.
-  until valid_move?(board, index) == true
-    index = get_user_input()
-  end
-  # if the move is valid, make the move and display the board to the user
-  move(board, index)
-  display(board)
+  puts "Please enter 1-9:"
 end
+# def turn(board)
+#   index = get_user_input
+#   # If the move is invalid, ask for a new move until a valid move is received.
+#   until valid_move?(board, index) == true
+#     index = get_user_input()
+#   end
+#   # if the move is valid, make the move and display the board to the user
+#   move(board, index)
+#   display(board)
+# end
