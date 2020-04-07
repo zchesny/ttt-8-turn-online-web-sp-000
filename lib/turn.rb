@@ -44,6 +44,7 @@ end
 
 def turn()
 # ask user for their move by position 1-9
+  puts "Please enter 1-9:"
   position = gets.strip.to_i
 # receive the user input
 # convert position to an index
