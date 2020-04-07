@@ -46,7 +46,7 @@ def turn()
   # ask user for their move by position 1-9
   puts "Please enter 1-9:"
   # receive the user input
-  position = gets.strip
+  input = gets.strip
   # convert position to an index
   index = input_to_index(input)
   # if the move is valid, make the move and display the board to the user
