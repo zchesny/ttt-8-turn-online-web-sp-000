@@ -41,7 +41,7 @@ def move(board, index, char="X")
   update_array_at_with(board, index, char)
 end
 
-def get_user_input()
+def get_user_input
   # ask user for their move by position 1-9
   puts "Please enter 1-9:"
   # receive the user input
