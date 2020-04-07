@@ -43,6 +43,7 @@ end
 
 def turn()
   index = get_user_input()
+  # If the move is invalid, ask for a new move until a valid move is received.
   until valid_move?(board, index) == true
     index = get_user_input()
   end
