@@ -1,5 +1,10 @@
 def display_board(board)
-  
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
+  puts "-----------"
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
+  puts "-----------"
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+end
 
 def turn()
 # ask user for their move by position 1-9
