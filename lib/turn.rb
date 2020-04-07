@@ -48,6 +48,7 @@ def turn()
   # receive the user input
   position = gets.strip.to_i
   # convert position to an index
+  index = input_to_index(input)
   # if the move is valid, make the move and display the board to the user
   # if the move is invalid, ask for a new move until a valid move is received
 end
