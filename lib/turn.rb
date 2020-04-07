@@ -8,7 +8,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  the_string_they_put_in = gets.strip
+  input = gets.strip
   their_desired_position = input_to_index(the_string_they_put_in)
     if valid_move?(board, their_desired_position) == true
     move(board, their_desired_position)
