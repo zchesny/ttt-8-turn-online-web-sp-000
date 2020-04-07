@@ -1,3 +1,6 @@
+def display_board(board)
+  
+
 def turn()
 # ask user for their move by position 1-9
   position = gets.strip.to_i
