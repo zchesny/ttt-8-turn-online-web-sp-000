@@ -45,13 +45,13 @@ def turn()
 
   # if the move is valid, make the move and display the board to the user
   until valid_move?(board, index) == true
-    
+
   end
   if valid_move?(board, index) == true
     move(board, index)
     display(board)
   else
-    
+
   end
   # if the move is invalid, ask for a new move until a valid move is received
 end
