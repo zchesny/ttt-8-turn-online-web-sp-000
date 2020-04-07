@@ -28,6 +28,20 @@ def position_taken?(board, index)
   end
 end
 
+# code your input_to_index and move method here!
+def input_to_index(input)
+  input.to_i - 1
+end
+
+def update_array_at_with(array, index, value)
+  array[index] = value
+end
+
+def move(board, index, char="X")
+  update_array_at_with(board, index, char)
+  display_board(board)
+end
+
 def turn()
 # ask user for their move by position 1-9
   position = gets.strip.to_i
