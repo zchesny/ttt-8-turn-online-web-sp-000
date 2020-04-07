@@ -41,15 +41,6 @@ def move(board, index, char="X")
   update_array_at_with(board, index, char)
 end
 
-# def get_user_input
-#   # ask user for their move by position 1-9
-#   puts "Please enter 1-9:"
-#   # receive the user input
-#   input = gets.strip
-#   # convert position to an index
-#   index = input_to_index(input)
-# end
-
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
@@ -61,13 +52,3 @@ def turn(board)
   #   turn(board)
   end
 end
-# def turn(board)
-#   index = get_user_input
-#   # If the move is invalid, ask for a new move until a valid move is received.
-#   until valid_move?(board, index) == true
-#     index = get_user_input()
-#   end
-#   # if the move is valid, make the move and display the board to the user
-#   move(board, index)
-#   display(board)
-# end
