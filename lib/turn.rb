@@ -6,6 +6,28 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+# code your #valid_move? method here
+def valid_move?(board, index)
+  # is index present in game board
+  if index.between?(0, 8) == false
+    return false
+  end
+  # is index not already filled with a token
+  if position_taken?(board, index) == true
+    return false
+  else
+    return true
+  end
+end
+
+def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] = nil
+    return false
+  else
+    return true
+  end
+end
+
 def turn()
 # ask user for their move by position 1-9
   position = gets.strip.to_i
