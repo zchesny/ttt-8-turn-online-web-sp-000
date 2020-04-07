@@ -43,10 +43,10 @@ def move(board, index, char="X")
 end
 
 def turn()
-# ask user for their move by position 1-9
+  # ask user for their move by position 1-9
   puts "Please enter 1-9:"
+  # receive the user input
   position = gets.strip.to_i
-# receive the user input
 # convert position to an index
 # if the move is valid, make the move and display the board to the user
 # if the move is invalid, ask for a new move until a valid move is received
