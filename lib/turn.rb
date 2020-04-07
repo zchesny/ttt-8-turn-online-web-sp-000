@@ -50,7 +50,7 @@ def turn(board)
     display(board)
     return
   end
-  # # else
-  # #   turn(board)
-  # end
+  else
+    turn(board)
+  end
 end
