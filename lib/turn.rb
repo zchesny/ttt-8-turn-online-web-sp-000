@@ -42,7 +42,7 @@ def move(board, index, char="X")
 end
 
 def turn()
-
+  index = get_user_input()
   # if the move is valid, make the move and display the board to the user
   until valid_move?(board, index) == true
 
