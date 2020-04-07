@@ -50,5 +50,9 @@ def turn()
   # convert position to an index
   index = input_to_index(input)
   # if the move is valid, make the move and display the board to the user
+  if valid_move?(board, index) == true
+    move(board, index)
+    display(board)
+  end
   # if the move is invalid, ask for a new move until a valid move is received
 end
